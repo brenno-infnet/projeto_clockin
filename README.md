@@ -1,4 +1,4 @@
-# Projet ClockIn - Backend com Express Node.JS [Projeto em desenvolvimento]
+# Projeto ClockIn - Backend com Express Node.JS [Projeto em desenvolvimento]
 
 ## Sobre
 Projeto desenvolvido por [Brenno Fernandes](https://github.com/tecbrenno) para a disciplina Backend com Express Node.JS.
@@ -10,4 +10,14 @@ O colaborador se cadastrará na aplicação (Employee) informando [cpf, nome, em
 Projeto Público, disponível para contribuição de todos.
 
 ## Utilização
-Para utilização importe o arquivo 
+Para utilização utilize o arquivo de [rotas do postman](https://github.com/brenno-infnet/projeto_clockin/blob/master/postman/ClockIn.postman_collection.json)
+
+## Descrição das Rotas
+
+### Employee
+
+#### [Get] employee -> Lista todos os colaboradores cadastrados (127.0.0.1:3333/employees)
+#### [Get] employee/cpf -> Exibe detalhes de um único colaborador (127.0.0.1:3333/employees/:cpf)
+#### [Post] employee/add -> Cria um novo colaborador através de um payload json (127.0.0.1:3333/employees/add)
+#### [Put] employee/cpf -> Atualiza os dados de um colaborador através de um payload json e uma chave CPF (127.0.0.1:3333/employees/:cpf)
+#### [Delete] employee/cpf -> Remove um colaborador através de uma chave CPF (127.0.0.1:3333/employees/:cpf)
