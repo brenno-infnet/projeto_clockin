@@ -1,0 +1,530 @@
+{
+	"info": {
+		"_postman_id": "64af9bfc-d49f-421e-b9b4-865598a374f9",
+		"name": "ClockIn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16560973"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3333/employees",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employees/cpf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3333/employees/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"employees",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employees/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"123456789\",\r\n    \"name\": \"Fulano de Tal\",\r\n    \"email\": \"fulano.de.tal@gmail.com\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/employees/add",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"employees",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employees/cpf",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"123456789\",\r\n    \"name\": \"Fulano de Tal\",\r\n    \"email\": \"fulano.de.tal@gmail.com\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/employees/123456789",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"employees",
+								"123456789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employees/cpf",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/employees/123456789",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"employees",
+								"123456789"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3333/company",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\": \"123456789123456789\",\r\n    \"name\": \"Fundação Devs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/company/add",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"company",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company/cnpj",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\": \"123456789123456789\",\r\n    \"name\": \"Fundação Devs Noode.JS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/company/123456789123456789",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"company",
+								"123456789123456789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company/cnpj",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/company/123456789123456789",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"company",
+								"123456789123456789"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "workday",
+			"item": [
+				{
+					"name": "workday/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3333/workday",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"workday"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "workday/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\": \"123456789123456789\",\r\n    \"cpf\": \"123456789\",\r\n    \"workdays_of_the_week\":{\r\n          \"monday\": {\r\n            \"start_of_work\": \"08:00\",\r\n            \"end_of_work\": \"17:00\",\r\n            \"rest_day\": false\r\n          },\r\n          \"tuesday\": {\r\n            \"start_of_work\": \"08:00\",\r\n            \"end_of_work\": \"17:00\",\r\n            \"rest_day\": false\r\n          },\r\n          \"wednesday\": {\r\n            \"start_of_work\": \"08:00\",\r\n            \"end_of_work\": \"17:00\",\r\n            \"rest_day\": false\r\n          },\r\n          \"thursday\": {\r\n            \"start_of_work\": \"08:00\",\r\n            \"end_of_work\": \"17:00\",\r\n            \"rest_day\": false\r\n          },\r\n          \"friday\": {\r\n            \"start_of_work\": \"08:00\",\r\n            \"end_of_work\": \"17:00\",\r\n            \"rest_day\": false\r\n          },\r\n          \"saturday\": {\r\n            \"start_of_work\": null,\r\n            \"end_of_work\": null,\r\n            \"rest_day\": true\r\n          },\r\n          \"sunday\": {\r\n            \"start_of_work\": null,\r\n            \"end_of_work\": null,\r\n            \"rest_day\": true\r\n          }\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/workday/add",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"workday",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "workday/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\": \"123456789123456789\",\r\n    \"cpf\": \"123456789\",\r\n    \"workdays_of_the_week\":{\r\n          \"monday\": {\r\n            \"start_of_work\": \"08:30\",\r\n            \"end_of_work\": \"17:00\",\r\n            \"rest_day\": false\r\n          },\r\n          \"tuesday\": {\r\n            \"start_of_work\": \"08:00\",\r\n            \"end_of_work\": \"17:00\",\r\n            \"rest_day\": false\r\n          },\r\n          \"wednesday\": {\r\n            \"start_of_work\": \"08:00\",\r\n            \"end_of_work\": \"17:00\",\r\n            \"rest_day\": false\r\n          },\r\n          \"thursday\": {\r\n            \"start_of_work\": \"08:00\",\r\n            \"end_of_work\": \"17:00\",\r\n            \"rest_day\": false\r\n          },\r\n          \"friday\": {\r\n            \"start_of_work\": \"08:00\",\r\n            \"end_of_work\": \"17:00\",\r\n            \"rest_day\": false\r\n          },\r\n          \"saturday\": {\r\n            \"start_of_work\": null,\r\n            \"end_of_work\": null,\r\n            \"rest_day\": true\r\n          },\r\n          \"sunday\": {\r\n            \"start_of_work\": null,\r\n            \"end_of_work\": null,\r\n            \"rest_day\": true\r\n          }\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/workday/0f5c642b-08c8-4e47-8ef9-6c95632d5dc3",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"workday",
+								"0f5c642b-08c8-4e47-8ef9-6c95632d5dc3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "workday/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/workday/57c98158-7c40-41f9-9fed-b4d5eb987164",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"workday",
+								"57c98158-7c40-41f9-9fed-b4d5eb987164"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clocks",
+			"item": [
+				{
+					"name": "clock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3333/clock",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"clock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clock/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3333/clock/0f5c642b-08c8-4e47-8ef9-6c95632d5dc3",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"clock",
+								"0f5c642b-08c8-4e47-8ef9-6c95632d5dc3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clock/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"workday_id\": \"e09d12bd-6d00-49cc-979b-9fb3bc9ffd1e\",\r\n    \"dtime\": \"08:47 2023-05-21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/clock/add",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"clock",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clock/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"workday_id\": \"a7548e75-ab51-4dab-aee2-72c9a3c5c915\",\r\n    \"dtime\": \"18:47 2023-05-21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/clock/a7548e75-ab51-4dab-aee2-72c9a3c5c915",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"clock",
+								"a7548e75-ab51-4dab-aee2-72c9a3c5c915"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clock/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"workday_id\": \"a7548e75-ab51-4dab-aee2-72c9a3c5c915\",\r\n    \"dtime\": \"18:47 2023-05-21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3333/clock/380e35bd-f9f8-4da0-be27-d87691381457",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"clock",
+								"380e35bd-f9f8-4da0-be27-d87691381457"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
