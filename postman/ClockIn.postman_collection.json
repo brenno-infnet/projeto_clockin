@@ -31,7 +31,7 @@
 					"response": []
 				},
 				{
-					"name": "employees/cpf",
+					"name": "employees/:cpf",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -84,7 +84,7 @@
 					"response": []
 				},
 				{
-					"name": "employees/cpf",
+					"name": "employees/:cpf",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -115,7 +115,7 @@
 					"response": []
 				},
 				{
-					"name": "employees/cpf",
+					"name": "employees/:cpf",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -172,6 +172,28 @@
 					"response": []
 				},
 				{
+					"name": "company/:cnpj",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3333/company/123456789123456789",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"company",
+								"123456789123456789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "company/add",
 					"request": {
 						"method": "POST",
@@ -203,7 +225,7 @@
 					"response": []
 				},
 				{
-					"name": "company/cnpj",
+					"name": "company/:cnpj",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -234,7 +256,7 @@
 					"response": []
 				},
 				{
-					"name": "company/cnpj",
+					"name": "company/:cnpj",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -291,6 +313,28 @@
 					"response": []
 				},
 				{
+					"name": "workday/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3333/workday/57c98158-7c40-41f9-9fed-b4d5eb987164",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3333",
+							"path": [
+								"workday",
+								"57c98158-7c40-41f9-9fed-b4d5eb987164"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "workday/add",
 					"request": {
 						"method": "POST",
@@ -322,7 +366,7 @@
 					"response": []
 				},
 				{
-					"name": "workday/",
+					"name": "workday/:id",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -353,7 +397,7 @@
 					"response": []
 				},
 				{
-					"name": "workday/",
+					"name": "workday/:id",
 					"request": {
 						"method": "DELETE",
 						"header": [],
