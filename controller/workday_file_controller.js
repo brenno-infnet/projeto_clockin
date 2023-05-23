@@ -19,12 +19,39 @@ function get_workdays_promise() {
     })
   })
 }
+
+//GET
+function get_workdays_by_id_promise(id) {
+  return new Promise((resolve, reject) => {
+    fs.readFile('./model/workdays.json', 'utf8', (err, data) => {
+      if (err) {
+        reject(err)
+      }
+      else {
+        let workdays = JSON.parse(data)
+        const index = workdays.findIndex(e => e.id === id)
+        if (index == -1){
+          reject({})
+        } else {          
+          resolve(workdays[index])
+        }        
+      }
+    })
+  })
+}
+
 const get_workdays = (req, res) => {
   get_workdays_promise()
     .then(workdays => res.status(200).json(workdays))
     .catch(err => res.status(500).send(err.message));
 }
 
+const get_workdays_by_id = (req, res) => {
+  const id = req.params.id
+  get_workdays_by_id_promise(id)
+    .then(workdays => res.status(200).json(workdays))
+    .catch(err => res.status(500).send(err.message));
+}
 
 //POST
 function add_workdays_promise(cpf, cnpj, workday) {
@@ -58,7 +85,7 @@ function add_workdays_promise(cpf, cnpj, workday) {
   })
 }
 
-const add_workdays = (req, res) => {
+async function add_workdays(req, res){
   const workday = req.body
   const cpf = req.body.cpf
   const cnpj = req.body.cnpj
@@ -69,8 +96,8 @@ const add_workdays = (req, res) => {
     return res.status(400).json({ message: 'Invalid workday Data', errors: valid_result.errors })
   }
 
-  const valid_cpf = check_employee_by_cpf(cpf)
-  const valid_cnpj = check_company_by_cnpj(cnpj)
+  // const valid_cpf = await check_employee_by_cpf(cpf)
+  // const valid_cnpj = check_company_by_cnpj(cnpj)
 
   // if (!valid_cpf) {
   //   console.log(typeof valid_cpf)
@@ -171,4 +198,4 @@ const remove_workdays = (req, res) => {
 }
 
 
-module.exports = { get_workdays, add_workdays, add_workdays_promise, update_workdays, remove_workdays }
+module.exports = { get_workdays, add_workdays, get_workdays_by_id, add_workdays_promise, update_workdays, remove_workdays }

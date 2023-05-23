@@ -52,8 +52,8 @@ function get_employee_by_cpf(req, res){
 
 function check_employee_by_cpf(cpf){  
   get_employees_by_cpf_promise(cpf)
-    .then(employees => employees)
-    .catch(err => err);
+  .then(employees => res.status(200).json(employees))
+  .catch(err => res.status(404).send(err.message));
 }
 
 //POST
